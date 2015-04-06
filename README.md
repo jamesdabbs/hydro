@@ -10,15 +10,16 @@ Expects a configuration file in `/etc/hydro/config.yml`
 
 ```yml
 ---
-s3: {
-  id:     ...,
-  key:    ...,
+s3:
+  id:     ...
+  key:    ...
   bucket: ...
-},
-log: ...,
-rules: [
-  { to: ..., ext: ... }
-]
+log: /var/log/hydro.log
+rules:
+  - ext: .jpg
+    ext: /home/user/Pictures
+  - to:  .mp3
+    ext: /home/user/Music
 ```
 
 ## Usage
