@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'hydro'
+
+path = ARGV.shift || raise("Provide a file to upload")
+
+precipitator = Hydro::Precipitator.new
+precipitator.upload_file path

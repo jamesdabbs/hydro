@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'hydro'
+
+precipitator = Hydro::Precipitator.new
+precipitator.poll 60
