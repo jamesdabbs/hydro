@@ -2,8 +2,9 @@ module Hydro
   class Rule
     attr_reader :ext, :to
 
-    def initialize ext:, to:
-      @ext, @to = ext, to
+    def initialize opts={}
+      @ext = opts.fetch :ext
+      @to  = opts.fetch :to
       FileUtils.mkdir_p @to
     end
 
